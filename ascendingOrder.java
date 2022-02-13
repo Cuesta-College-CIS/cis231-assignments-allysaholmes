@@ -16,4 +16,4 @@ public class ascendingOrder {
             System.out.print(r2+" "+r3+" "+r1);
          }
     }
-    }
+}

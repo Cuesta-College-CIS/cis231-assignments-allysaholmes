@@ -18,4 +18,4 @@ public class Main {
             System.out.print(r1+" "+r2+" "+r3+"\n"); 
             System.out.println(r3);
     }
-    }
+  }
