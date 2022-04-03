@@ -1,7 +1,10 @@
 public class quiz121 {
     public static void main(String[] args) {
 		final int CNT = 5;
-		int minval, minidx, tmp;
+		//initialized values
+        int minval = 0;
+        int minidx = 0;
+        int tmp = 0;
 
 		Scanner scnr = new Scanner(System.in);
 		int N = scnr.nextInt();
@@ -9,7 +12,11 @@ public class quiz121 {
 		for (int i = 0; i < N; i++)
 			numbers[i] = scnr.nextInt();
 
-		// Your code
+        for (int i = 0; i < numbers.length; i++) {
+            minidx = i;
+        }
+
+		
 
 		scnr.close();
 	}
