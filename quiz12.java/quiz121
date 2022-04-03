@@ -9,13 +9,19 @@ public class quiz121 {
 		Scanner scnr = new Scanner(System.in);
 		int N = scnr.nextInt();
 		int[] numbers = new int[N];
-		for (int i = 0; i < N; i++)
+		//read original values
+        for (int i = 0; i < N; i++)
 			numbers[i] = scnr.nextInt();
+        //update the starting point/index of for loop (how? which for-loop will do this?)
+        int bounds = numbers.length;
+    
+        for (int i = 0; i < bounds-1; i++){
+            
+        }
+        //create a new array for sorted values
 
-            //read original values
-            //create a new array for sorted values
             //find the smallest value, assign it's index and value to seperate variables
-            //update the starting point/index of for loop (how? which for-loop will do this?)
+            
             //stop after five sorts using CNT (so we count using a for-loop too)
             //will need a for-loop to print as well
 
