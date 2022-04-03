@@ -15,7 +15,9 @@ public class quiz121 {
             //read original values
             //create a new array for sorted values
             //find the smallest value, assign it's index and value to seperate variables
-            //update the starting point/index of for loop (how?)
+            //update the starting point/index of for loop (how? which for-loop will do this?)
+            //stop after five sorts using CNT (so we count using a for-loop too)
+            //will need a for-loop to print as well
 
         for (int i = 0; i < numbers.length; i++) {
             minidx = i;
