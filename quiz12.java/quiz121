@@ -16,7 +16,12 @@ public class quiz121 {
         int bounds = numbers.length;
     
         for (int i = 0; i < bounds-1; i++){
-            
+            minidx = i;
+            for (int j = 0; j < /*what value??*/; j++){
+                if (numbers[j]</*oh god what value*/){
+                    minidx = j;
+                }
+            }
         }
         //create a new array for sorted values
 
