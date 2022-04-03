@@ -9,34 +9,33 @@ public class quiz121 {
 		Scanner scnr = new Scanner(System.in);
 		int N = scnr.nextInt();
 		int[] numbers = new int[N];
+
 		//read original values
         for (int i = 0; i < N; i++)
 			numbers[i] = scnr.nextInt();
-        //update the starting point/index of for loop (how? which for-loop will do this?)
+        //update the starting point/index of for loop
         int bounds = numbers.length;
 
         for (int i = 0; i < bounds-1; i++){
             minidx = i;
-            for (int j = 0; j < /*what value??*/; j++){
+            for (int j = 0; j < minidx; j++){
+                //find the smallest value, assign it's index and value to seperate variables
                 if (numbers[j] < numbers[minidx]) {
                     minidx = j;
                 }
             }
-            int tmp = /*what goes here?*/;
+            //create a new array for sorted values
+            int tmp = numbers[minidx];
             numbers[minidx] =  numbers[i];
             numbers[i] = tmp;
 
         }
-        //create a new array for sorted values
-        //find the smallest value, assign it's index and value to seperate variables
-        //stop after five sorts using CNT (so we count using a for-loop too)
-        
+
         //for-loop to print updated numbers array
-        for (int i = 0; i < 5; i++)
+        //stop after five sorts using CNT (so we count using a for-loop too)
+        for (int i = 0; i < CNT; i++)
             System.out.print(numbers[i] + " "); 
-
-		
-
+        System.out.println();
 		scnr.close();
 	}
 
