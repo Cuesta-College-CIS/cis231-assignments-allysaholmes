@@ -14,26 +14,26 @@ public class quiz121 {
 			numbers[i] = scnr.nextInt();
         //update the starting point/index of for loop (how? which for-loop will do this?)
         int bounds = numbers.length;
-    
+
         for (int i = 0; i < bounds-1; i++){
             minidx = i;
             for (int j = 0; j < /*what value??*/; j++){
-                if (numbers[j]</*oh god what value*/){
+                if (numbers[j] < numbers[minidx]) {
                     minidx = j;
                 }
             }
+            int tmp = /*what goes here?*/;
+            numbers[minidx] =  numbers[i];
+            numbers[i] = tmp;
+
         }
         //create a new array for sorted values
-
-            //find the smallest value, assign it's index and value to seperate variables
-            
-            //stop after five sorts using CNT (so we count using a for-loop too)
-            //will need a for-loop to print as well
-
-        for (int i = 0; i < numbers.length; i++) {
-            minidx = i;
-            for (int j = i + 1; j < /*what value?*/; j++)
-        }
+        //find the smallest value, assign it's index and value to seperate variables
+        //stop after five sorts using CNT (so we count using a for-loop too)
+        
+        //for-loop to print updated numbers array
+        for (int i = 0; i < 5; i++)
+            System.out.print(numbers[i] + " "); 
 
 		
 
