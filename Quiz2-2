@@ -1,0 +1,87 @@
+import java.util.Scanner;
+import java.util.Arrays;
+
+public static void Quiz2-2(string[] args) {
+    Scanner scnr = new Scanner(System.in);
+    int[] array1, array2;
+    
+    public static void constructArray(Scanner scnr) {
+        int[] arr = new int[scnr];
+        for (int i = 0; i < scnr; i++) {
+            arr[i]= Math.random();
+        }
+    }
+
+    array1 = constructArray();
+    array2 = constructArray();
+
+    public static void printArray(int[] args) {
+        System.out.println(args.toString);
+    }
+
+    printArray(array1);
+    printArray(array2);
+
+    public static void findMoreEvens(int[] arg1, int[] arg2){
+        int n1 = 0;
+        int n2 = 0;
+        //Finds the array with more even numbers
+        for (int i = 0; i < arg1.length; i++) {
+            if (i/2 == 0) {
+                n1++;
+            }
+        }
+        for(int i = 0; i < arg2.length; i++) {
+            if (i/2 == 0) {
+                n2++;
+            }
+        }
+        //returns that array 
+        if (n1 < n2) {
+           return arg2;
+        }
+        if (n2 < n1) {
+            return arg1;
+        }
+        
+    }
+    
+    int result = findMoreEvens(array1, array2);
+    System.out.print("The Array "+result+" has more even numbers");
+
+    public static void findGreatest(int[] arg1, int[] arg2){
+        int max1 = 0;
+        int max2 = 0;
+        //finds the array with greatest num
+        for(int i = 0; i < arg1.length; i++){
+            if (arg1[i] > max1) {
+            max1 = arg1[i];
+            arg1[arg1.length-1] = max1;
+            }
+        }
+        for(int i = 0; i < arg2.length; i++){
+            if (arg2[i] > max2) {
+            max2 = arg2[i];
+            arg2[arg2.length-1] = max2;
+            }
+        }
+        //returns the max val
+        if (max1 < max2) {
+            return max2;
+        }
+        if (max2 < max1) {
+            return max1;
+        }
+    }
+
+    result = findGreatest(array1, array2);
+    if (result == 1) {
+        System.out.println("The array "+result+" has the greatest value "+ array1[array1.length-1]);
+    } else {
+        System.out.println("The array "+result+" has the greatest value"+ array2[array2.length-1]);
+    }
+
+    scnr.close();
+
+
+}
