@@ -1,4 +1,4 @@
-import java.util.ArrayList
+import java.util.ArrayList;
 
 public class Main {
     public static ArrayList<Student> fillupStudent() {
@@ -25,5 +25,9 @@ public class Main {
         sid = findStudent(slist);
 
         printStudent(slist, sid);
+    }
+    private static Integer findStudent(ArrayList<Student> slist) {
+        //your code
+        return null;
     }
 }
