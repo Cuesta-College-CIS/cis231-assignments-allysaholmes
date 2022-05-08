@@ -1,13 +1,17 @@
 import java.util.ArrayList;
+//import java.util.Scanner;
+//import java.io.File;
+//import java.io.FileNotFoundException;
 
 public class Main {
+    
     public static ArrayList<Student> fillupStudent() {
 
         ArrayList<Student> slist = new ArrayList<Student>();
-
         //your code
         return slist;
     }
+    
     public static void printStudent(ArrayList<Student> slist) {
         //your code
     }
@@ -26,8 +30,9 @@ public class Main {
 
         printStudent(slist, sid);
     }
+
     private static Integer findStudent(ArrayList<Student> slist) {
-        //your code
         return null;
     }
+   
 }

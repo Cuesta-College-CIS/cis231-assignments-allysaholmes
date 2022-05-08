@@ -1,35 +1,42 @@
 import java.util.ArrayList;
+import java.util.Scanner;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class Student {
-    Integer sid;
-    String sname;
-    ArrayList<Course> clist;
+    static Integer sid;
+    static String sname;
+    static int coursenum;
+    static String cid;
+    static String cname;
+    static Integer credit;
+    static String grade;
+    static FileInputStream fileByteStream = null; // File input stream
+    static Scanner sc = new Scanner(System.in);
 
-    public static Student(int id, String name, ArrayList course) {
+    public static String readStudents(ArrayList<Student> studentList) throws IOException {
+        File fp = new File("studentinfo.txt");
+        Scanner sc = new Scanner(fp);
 
-    }
-
-    //while loop might belong in different class
-    while (sc.hasNextLine()) {
-        sid = sc.nextInt();
-        sname = sc.next();
-        coursenum = sc.nextInt();
-        ArrayList<Course> cl = new ArrayList<Course>();
-        for (int i = 0; i < coursenum; i++) {
-            cid = sc.next();
-            cname = sc.next();
-            credit = sc.nexstInt();
-            grade = sc.next();
-            Course c = new Course (cid, cnamne, credit, grade);
-            cl.add(c);
-        }
-        Student s = new Student(sid, sname, cl);
-        slist.add(s);
-    }
-
-    public Integer getTotalCredits();
-
-    public String toString();
-
+        while (sc.hasNextLine()) {
+            sid = sc.nextInt();
+            sname = sc.next();
+            coursenum = sc.nextInt();
+            ArrayList<Course> cl = new ArrayList<Course>();
+            for (int i = 0; i < coursenum; i++) {
+                cid = sc.next();
+                cname = sc.next();
+                credit = sc.nextInt();
+                grade = sc.next();
+                Course c = new Course (cid, cname, credit, grade);
+                cl.add(c);
+            }
     
+        }
+    }
+
+
+} 
 }
