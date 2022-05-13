@@ -1,12 +1,18 @@
 public class Course {
-   
-    public Course(String id, String name, Integer c, String g) {
+   String cid;
+   String cname;
+   Integer credit;
+   String grade;
+
+    public Course(String cid, String cname, Integer credit, String grade) {
 
     }
 
-    public String toString(int num) {
-        String toSt = " "+toString(num)+" ";
+    @Override
+    public String toString() {
+        String toSt = ("Course: "+cid+" "+cname+" "+credit+grade);
         return toSt;
         }
 
+    
 }
