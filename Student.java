@@ -7,7 +7,7 @@ import java.io.IOException;
 public class Student {
 	Integer sid;
 	String sname;
-	ArrayList<Course> clist;
+	ArrayList<Student> slist;
     Integer credit;
     File info = new File ("studentinfo.txt");
     Scanner text = new Scanner(info);
@@ -15,9 +15,9 @@ public class Student {
 	public Student(Integer id, String name, ArrayList<Course> c) {
 		sid = id;
 		sname = name;
-		clist = c;
+		slist = c;
         Student s = new Student(sid, sname, c);
-        //clist.add(s);
+        slist.add(s);
 	}
     
    

@@ -4,14 +4,20 @@ import java.util.Scanner;
 //import java.io.FileInputStream;
 //import java.io.FileNotFoundException;
 
+/* 
+-Focus on the methods and their function within the code
+-How do I access the credits for each student individually?
+-Uncertain if the text file is being read or how I would access it by index
+*/
+
 public class Main {
     static Integer sid = 0;
     static String sname = "jo";
     static Integer coursenum = 0;
-    static String cid = "course id";
-    static String cname = "course name";
-    static Integer credit = 0;
-    static String grade = "A";
+    static String courseId = "course id";
+    static String courseName = "course name";
+    static Integer courseCredit = 0;
+    static String courseGrade = "A";
     static Scanner sc = new Scanner(System.in);
    // FileInputStream fileByteStream = new FileInputStream("studentinfo.txt"); // File input stream
    // Scanner inFS = new Scanner(fileByteStream);                  // Scanner object
@@ -26,11 +32,11 @@ public class Main {
             coursenum = sc.nextInt();
             ArrayList<Course> cl = new ArrayList<Course>();
             for (int i = 0; i < coursenum; i++) {
-                cid = sc.next();
-                cname = sc.next();
-                credit = sc.nextInt();
-                grade = sc.next();
-                Course c = new Course (cid, cname, credit, grade);
+                courseId = sc.next();
+                courseName = sc.next();
+                courseCredit = sc.nextInt();
+                courseGrade = sc.next();
+                Course c = new Course (courseId, courseName, courseCredit, courseGrade);
                 cl.add(c);
             }
         }
@@ -44,10 +50,13 @@ public class Main {
     }
 
     public static void printStudent(ArrayList<Student> slist, Integer id) {
+        for(int i = 0; i < slist.size(); i++) {   
+            slist.get(i);
+            if(slist.get(i) != null)
         return;
     }
 
-    public static void main(String[] args) {
+    public main(String[] args) {
         Integer sid;
         ArrayList<Student> slist;
 
@@ -58,8 +67,22 @@ public class Main {
         printStudent(slist, sid);
     }
 
-    private static Integer findStudent(ArrayList<Student> slist) {
-        return null;
+    public static Integer findStudent(String n) {
+        Integer tmp = 0;
+        Integer index = 0;
+        Integer student = 0;
+        int id = 0;
+
+        for (int i = 0; i <slist.size(); i++) {
+            tmp = (slist.get(i)).getTotalCredits();
+            if (tmp > index) {
+                index = i;
+                student = tmp;
+            }
+        }
+        id = (slist.get(index)).getId();
+        return id;
+        }
     }
    
 }
