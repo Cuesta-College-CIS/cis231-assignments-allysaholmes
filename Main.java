@@ -49,14 +49,6 @@ public class Main {
         }  
     }
 
-    public static ArrayList<Student> Main(ArrayList<Student> slist, Integer id) {
-        for(int i = 0; i < slist.size(); i++) {   
-            slist.get(i);
-            return slist;
-        }
-        return slist;
-    }
-
     public void main(String[] args) {
         ArrayList<Student> slist;
 
@@ -68,21 +60,19 @@ public class Main {
     }
 
     public static Integer findStudent(ArrayList<Student> slist) {
-        Integer tmp = 0;
-        Integer index = 0;
-        Integer student = 0;
-        int id = 0;
+        int tmp = 0;
+        int index = 0;
+        int student = 0;
 
         for (int i = 0; i <slist.size(); i++) {
-            tmp = (slist.get(i)).getTotalCredits();
             if (tmp > index) {
+                tmp = index;
                 index = i;
                 student = tmp;
             }
         }
-        id = (slist.get(index)).getId();
-        return id;
-        
+       
+        return student;
     }
    
 }

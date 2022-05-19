@@ -17,6 +17,7 @@ public class elFin {
     public static void sortArray(){
         for(int i = 0; i < n; i++) {
             for (int j = i+1; i < n; j++) {
+                //idk why VSCode says tmp isn't used
                 int tmp = 0;
                 if (intArray[i] < intArray[j]) {
                     tmp = intArray[i];
