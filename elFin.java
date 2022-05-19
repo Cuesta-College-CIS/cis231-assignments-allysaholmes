@@ -15,8 +15,14 @@ public class elFin {
     }
 
     public static void sortArray(){
+       
+        int idxFirst = 0;
+        int idxLast = intArray.length;
+        int idxMiddle = idxFirst + (idxLast-idxFirst)/2;
+
+        //sorts from smallest num to largest num
         for(int i = 0; i < n; i++) {
-            for (int j = i+1; i < n; j++) {
+            for(int j = i+1; i < n; j++) {
                 //idk why VSCode says tmp isn't used
                 int tmp = 0;
                 if (intArray[i] < intArray[j]) {
@@ -27,7 +33,24 @@ public class elFin {
                 tmp = 0;
             }
         }
-        System.out.println(Arrays.toString(intArray));
+        //print the number in the middle
+        System.out.println(intArray[idxMiddle]);
+    }
+
+    public static void subSequence() {
+        int temp = 0;
+        int min = 0;
+        int max = 0;
+        for(int i = 0; i < n; i++){
+            for(int j = i+1; j < n; j++){
+                for(int k = j+1; k < n; k++){
+                    if ((i+j+k) > max) {
+                        max = (i+j+k);
+                    } if ((i+j+k) < min) {
+                        min = (i+j+k);}
+                }
+            }
+        }
     }
 
 }
