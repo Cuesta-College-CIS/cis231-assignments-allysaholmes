@@ -1,6 +1,4 @@
 import java.util.ArrayList;
-import java.util.Scanner;
-import java.io.FileInputStream;
 import java.io.IOException;
 
 public class Main {
@@ -17,9 +15,10 @@ public class Main {
 
         slist = fillupStudent();
         printStudent(slist);
-        sid = findStudent(slist);
+    }
 
-        printStudent(slist);
+    private ArrayList<Student> fillupStudent() {
+        return null;
     }
 
     public static Integer findStudent(ArrayList<Student> slist) {
