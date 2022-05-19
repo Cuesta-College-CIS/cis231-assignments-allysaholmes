@@ -46,6 +46,8 @@ public class elFin {
         Random randNum = new Random();
         for (int i = 0; i < n; i++)
             subArray[i] = randNum.nextInt();
+
+    System.out.println(Arrays.toString(subArray));
     }
 
     public static void subSequence() {
