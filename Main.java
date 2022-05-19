@@ -49,22 +49,22 @@ public class Main {
         }  
     }
 
-    public static void printStudent(ArrayList<Student> slist, Integer id) {
+    public static ArrayList<Student> Main(ArrayList<Student> slist, Integer id) {
         for(int i = 0; i < slist.size(); i++) {   
             slist.get(i);
-            if(slist.get(i) != null)
-        return;
+            return slist;
+        }
+        return slist;
     }
 
     public void main(String[] args) {
-        Integer sid;
         ArrayList<Student> slist;
 
         slist = fillupStudent();
         printStudent(slist);
         sid = findStudent(slist);
 
-        printStudent(slist, sid);
+        printStudent(slist);
     }
 
     public static Integer findStudent(ArrayList<Student> slist) {

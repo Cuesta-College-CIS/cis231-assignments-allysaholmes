@@ -22,7 +22,7 @@ public class Student {
     
    
     @Override
-    public String toString() {
+    public String toString (ArrayList<Student> slist) {
         String studentStr = ("Student: "+sid+" "+sname);
       return studentStr;
     }
@@ -30,6 +30,11 @@ public class Student {
 	public String getTotalCredits() {
         String totalCredits = ("Total Credits "+credit);
         return totalCredits;
+    }
+
+
+    public int getId() {
+        return 0;
     }
 
 }
