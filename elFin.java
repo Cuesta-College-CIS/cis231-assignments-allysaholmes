@@ -37,6 +37,8 @@ public class elFin {
         System.out.println(intArray[idxMiddle]);
     }
 
+   //create a new array with random numbers
+   static int[] subArray = new int[n];
     public static void subSequence() {
         int temp = 0;
         int min = 0;
@@ -51,6 +53,8 @@ public class elFin {
                 }
             }
         }
+        //max is returning three seperate indexes, this probably won't work
+        System.out.println(subArray[max]);
     }
 
 }
