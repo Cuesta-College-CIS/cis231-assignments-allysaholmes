@@ -56,7 +56,7 @@ public class Main {
         return;
     }
 
-    public main(String[] args) {
+    public void main(String[] args) {
         Integer sid;
         ArrayList<Student> slist;
 
@@ -67,7 +67,7 @@ public class Main {
         printStudent(slist, sid);
     }
 
-    public static Integer findStudent(String n) {
+    public static Integer findStudent(ArrayList<Student> slist) {
         Integer tmp = 0;
         Integer index = 0;
         Integer student = 0;
@@ -82,7 +82,7 @@ public class Main {
         }
         id = (slist.get(index)).getId();
         return id;
-        }
+        
     }
    
 }
