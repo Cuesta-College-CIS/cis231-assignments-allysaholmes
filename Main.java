@@ -1,8 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-//import java.io.File;
-//import java.io.FileInputStream;
-//import java.io.FileNotFoundException;
+import java.io.IOException;
 
 /* 
 -Focus on the methods and their function within the code
@@ -23,25 +21,25 @@ public class Main {
    // Scanner inFS = new Scanner(fileByteStream);                  // Scanner object
    
     
-    public static ArrayList<Student> fillupStudent() {
+   public static ArrayList<Student> fillupStudent() throws IOException {
 
-        ArrayList<Student> slist = new ArrayList<Student>();
-        while (sc.hasNextLine()) {
-            sid = sc.nextInt();
-            sname = sc.next();
-            coursenum = sc.nextInt();
-            ArrayList<Course> cl = new ArrayList<Course>();
-            for (int i = 0; i < coursenum; i++) {
-                courseId = sc.next();
-                courseName = sc.next();
-                courseCredit = sc.nextInt();
-                courseGrade = sc.next();
-                Course c = new Course (courseId, courseName, courseCredit, courseGrade);
-                cl.add(c);
-            }
+    ArrayList<Student> slist = new ArrayList<Student>();
+    while (sc.hasNextLine()) {
+        sid = sc.nextInt();
+        sname = sc.next();
+        coursenum = sc.nextInt();
+        ArrayList<Course> cl = new ArrayList<Course>();
+        for (int i = 0; i < coursenum; i++) {
+            courseId = sc.next();
+            courseName = sc.next();
+            courseCredit = sc.nextInt();
+            courseGrade = sc.next();
+            Course c = new Course (courseId, courseName, courseCredit, courseGrade);
+            cl.add(c);
         }
-        return slist;
     }
+    return slist;
+}
     
     public static void printStudent(ArrayList<Student> slist) {
         for(int i = 0; i < slist.size(); i++) {   
@@ -49,7 +47,7 @@ public class Main {
         }  
     }
 
-    public void main(String[] args) {
+    public void main(String[] args) throws IOException {
         ArrayList<Student> slist;
 
         slist = fillupStudent();
