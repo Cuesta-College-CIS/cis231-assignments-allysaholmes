@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.Arrays;
+import java.util.Random;
 
 public class elFin {
     static Scanner sc = new Scanner(System.in);
@@ -36,25 +37,38 @@ public class elFin {
         //print the number in the middle
         System.out.println(intArray[idxMiddle]);
     }
+   
+    //create a new array with random numbers or use same numbers as last array?
+    static int[] subArray = new int[n];
 
-   //create a new array with random numbers
-   static int[] subArray = new int[n];
+    public static void randomNumber() {
+        //random number creator
+        Random randNum = new Random();
+        for (int i = 0; i < n; i++)
+            subArray[i] = randNum.nextInt();
+    }
+
     public static void subSequence() {
-        int temp = 0;
-        int min = 0;
         int max = 0;
+        int maxi = 0;
+        int maxj = 0;
+        int maxk = 0;
+        
+        
+
         for(int i = 0; i < n; i++){
             for(int j = i+1; j < n; j++){
                 for(int k = j+1; k < n; k++){
                     if ((i+j+k) > max) {
                         max = (i+j+k);
-                    } if ((i+j+k) < min) {
-                        min = (i+j+k);}
+                        maxi = i;
+                        maxj = j;
+                        maxk = k;
+                    }
                 }
             }
         }
-        //max is returning three seperate indexes, this probably won't work
-        System.out.println(subArray[max]);
+        System.out.println(subArray[maxi]+" "+subArray[maxj]+" "+subArray[maxk]);
     }
 
 }
