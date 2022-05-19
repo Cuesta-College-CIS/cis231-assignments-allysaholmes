@@ -1,4 +1,4 @@
-public class activity {
+class activity {
     //Final Interface
     public interface courseActivity {
 	    void decideGrade();
