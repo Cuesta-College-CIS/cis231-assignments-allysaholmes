@@ -24,12 +24,11 @@ public class elFin {
         //sorts from smallest num to largest num
         for(int i = 0; i < n; i++) {
             for(int j = i+1; i < n; j++) {
-                //idk why VSCode says tmp isn't used
                 int tmp = 0;
+                tmp = intArray[i];
                 if (intArray[i] < intArray[j]) {
-                    tmp = intArray[i];
                     intArray[i] = intArray[j];
-                    intArray[j] = intArray[i];
+                    intArray[j] = tmp;
                 }
                 tmp = 0;
             }
