@@ -10,13 +10,14 @@ public class elFin {
 
     public static void printArray() {
         for (int i = 0; i < n; i++) {
+            //increments thought the intArray while saving input  
             intArray[i] = sc.nextInt();
         }
+        //prints the intArray
         System.out.println(Arrays.toString(intArray));
     }
 
     public static void sortArray(){
-       
         int idxFirst = 0;
         int idxLast = intArray.length;
         int idxMiddle = idxFirst + (idxLast-idxFirst)/2;
@@ -30,6 +31,7 @@ public class elFin {
                     intArray[i] = intArray[j];
                     intArray[j] = tmp;
                 }
+                //resets the temporary variable
                 tmp = 0;
             }
         }
@@ -37,13 +39,14 @@ public class elFin {
         System.out.println(intArray[idxMiddle]);
     }
    
-    //create a new array with random numbers or use same numbers as last array?
+ 
     static int[] subArray = new int[n];
 
     public static void randomNumber() {
         //random number creator
         Random randNum = new Random();
         for (int i = 0; i < n; i++)
+            //saves random numbers to array
             subArray[i] = randNum.nextInt();
 
     System.out.println(Arrays.toString(subArray));
@@ -58,7 +61,8 @@ public class elFin {
         for(int i = 0; i < n; i++){
             for(int j = i+1; j < n; j++){
                 for(int k = j+1; k < n; k++){
-                    if ((i+j+k) > max) {
+                    //checks the values of subArray in sections of 3
+                    if ((subArray[i]+subArray[j]+subArray[k]) > max) {
                         max = (i+j+k);
                         maxi = i;
                         maxj = j;

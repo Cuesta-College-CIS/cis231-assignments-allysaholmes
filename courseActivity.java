@@ -1,7 +1,5 @@
 
 public interface courseActivity {
-    void decideGrade();
-    
+    void decideGrade();  
     void printCourseinfo(); 
-            
 }

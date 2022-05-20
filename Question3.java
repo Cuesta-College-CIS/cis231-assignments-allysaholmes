@@ -11,6 +11,7 @@ public class Question3 {
 
 	public static void printStudent(ArrayList<Student> slist) {
 		for (int i = 0; i < slist.size(); i++) {
+			//prints slist as the for-loop increments
 			System.out.println(slist.get(i));
 		}
 	}

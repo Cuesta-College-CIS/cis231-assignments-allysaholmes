@@ -12,15 +12,17 @@ class readFile{
    public ArrayList<Object> fillupStudent() throws IOException {
 
     ArrayList<Object> slist = new ArrayList<Object>();
-        while (text.hasNextLine()) {
-            int studentID = text.nextInt();
-            String studentName = text.next();
-            int studentUnits = text.nextInt();
-            String studentDOB = text.next();
-            int numClasses = text.nextInt();
-            Student s = new Student (studentID, studentName,studentUnits, studentDOB);
-            slist.add(s);
-            ArrayList<Object> courseList = new ArrayList<Object>();
+    while (text.hasNextLine()) {
+        int studentID = text.nextInt();
+        String studentName = text.next();
+        int studentUnits = text.nextInt();
+        String studentDOB = text.next();
+        int numClasses = text.nextInt();
+        //Do I have a student object for this to refer to?
+        //Is that slist? 
+        Student s = new Student (studentID, studentName,studentUnits, studentDOB);
+        slist.add(s);
+        ArrayList<Object> courseList = new ArrayList<Object>();
             for (int i = 0; i < numClasses; i++) {
                 String courseId = text.next();
                 String courseName = text.next();
